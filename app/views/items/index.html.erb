@@ -1,0 +1,22 @@
+<h1>Item一覧</h1>
+<%= link_to 'new', new_item_path %> 
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>delivery_fee</th>
+        <th></th>
+    </tr>
+    <% @items.each do |item| %>
+    <tr>
+        <td><%= item.name %> </td>
+        <td><%= item.price %> </td>
+        <td><%= item.description %> </td>
+        <td><%= item.delivery_fee %> </td>
+        <td><%= link_to 'show', item_path(item) %> </td>
+        <td><%= link_to 'edit', edit_item_path(item) %> </td>
+        <td><%= link_to 'destroy', item_path(item), method: :delete %> </td>
+    </tr>
+    <% end %> 
+</table>
