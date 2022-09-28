@@ -13,3 +13,8 @@ docker-compose run web rails g model User name:string email:string ....
 
 
 docker-compose run web ...のように書く
+
+git pushの仕方
+git add .
+git commit -m "message"
+git push origin dev_ookura

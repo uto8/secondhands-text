@@ -1,0 +1,15 @@
+<h1>Orders一覧</h1>
+<table>
+    <tr>
+        <th>Buyer</th>
+        <th>Seller</th>
+        <th>Item</th>
+    </tr>
+    <% @orders.each do |order| %>
+    <tr>
+        <td><%= order.buyer %> </td>
+        <td><%= order.seller %> </td>
+        <td><%= order.item %> </td>
+    </tr>
+    <% end %> 
+</table>

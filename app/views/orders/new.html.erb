@@ -1,0 +1,9 @@
+<h2>購入内容の確認</h2>
+
+
+<%= form_with(model: @order, method: :post, local: true) do |f| %>
+    <%= f.hidden_field :buyer, :value => current_user.id %>
+    <%= f.hidden_field :seller, :value => 1 %>
+    <%= f.hidden_field :item, :value => @item.id %>
+    <%= f.submit :購入する, class: "btn btn-primary" %> 
+<% end %>

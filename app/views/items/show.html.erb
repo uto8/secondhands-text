@@ -19,4 +19,6 @@
     <%= @item.delivery_fee %> 
 </p>
 
+<%= link_to '購入手続きへ',  new_order_path(@item.id) %>
+
 <%= link_to '一覧に戻る', items_path %>
